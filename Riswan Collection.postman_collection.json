@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "73586bc3-4437-46b0-8b64-b95a43671aff",
+		"name": "Riswan Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "total_bayar",
+							"value": "1652024",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_masuk",
+							"value": "06 Januari 2024",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_hari_menginap",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api/book/update?Id=1",
+					"protocol": "https",
+					"host": [
+						"api"
+					],
+					"path": [
+						"book",
+						"update"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Riswan",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ibrahim",
+							"type": "text"
+						},
+						{
+							"key": "total_bayar",
+							"value": "560124",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_masuk",
+							"value": "05 Januari 2024",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_hari_menginap",
+							"value": "2",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api/book/",
+					"protocol": "https",
+					"host": [
+						"api"
+					],
+					"path": [
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api/book/delete?Id=1",
+					"protocol": "https",
+					"host": [
+						"api"
+					],
+					"path": [
+						"book",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Riswan",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ibrahim",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api/book",
+					"protocol": "https",
+					"host": [
+						"api"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api/book?firstName=Riswan&lastName=Ibrahim",
+					"protocol": "https",
+					"host": [
+						"api"
+					],
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Riswan"
+						},
+						{
+							"key": "lastName",
+							"value": "Ibrahim"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
